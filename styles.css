@@ -1,0 +1,368 @@
+:root {
+  --main-color: #2c69a7;
+  --secondary-color: #0b92b4;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+
+  font-family: "Crimson Text";
+}
+
+/*Header*/
+header {
+  position: relative;
+  z-index: 1000;
+  width: 100vw;
+  height: 60px;
+  background-color: var(--main-color);
+}
+
+nav {
+  list-style-type: none; /*removes dots*/
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  padding-top: 1%;
+}
+
+nav a {
+  width: auto;
+  text-align: center;
+  font-size: 25px;
+  text-decoration-line: none;
+  height: 40px;
+}
+header.logo {
+  position: absolute;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--secondary-color);
+  text-decoration: none;
+  cursor: pointer;
+}
+/* / Header*/
+
+/*Main*/
+
+.hero,
+.about-container {
+  position: relative;
+  width: 100vw;
+  height: 93vh;
+  background-image: url("/assets/team.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 100;
+}
+.hero-border,
+.about-content {
+  position: relative;
+  left: 50%;
+  top: 40%;
+  width: 80%;
+  border: 1px var(--main-color) solid;
+  height: fit-content;
+  background-color: #2c69a789;
+  transition: 0.5s;
+  transform: translate(-50%);
+}
+
+.hero-border:hover,
+.about-content:hover {
+  background-color: #2c69a7e1;
+}
+
+.hero h1,
+.about-container h1 {
+  position: relative;
+  left: 50%;
+  top: 10%;
+  text-wrap: nowrap;
+  transform: translate(-50%);
+  font-size: 60px;
+  width: 400px;
+}
+
+.hero p,
+.about-container p {
+  font-size: 25px;
+  position: relative;
+  color: white;
+  padding: 2%;
+}
+
+.button {
+  background-color: white;
+  color: black;
+  border: 2px solid var(--main-color);
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 18px;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%);
+}
+.button:hover {
+  background-color: var(--main-color);
+  color: white;
+}
+
+.divider {
+  position: relative;
+  width: 100%;
+  height: 80px;
+}
+
+/*Services*/
+
+.services-container {
+  width: 100vw;
+  height: 50vh;
+  position: relative;
+  background-image: url("/assets/plumbing.avif");
+  background-size: cover;
+}
+.services-container h1 {
+  color: black;
+  position: absolute;
+  top: 10%;
+  left: 70%;
+  transform: translate(-50%);
+  z-index: 100;
+  font-size: 50px;
+}
+.services-container ul {
+  color: black;
+  position: absolute;
+  top: 25%;
+  left: 70%;
+  z-index: 100;
+  font-size: 30px;
+  transform: translate(-50%);
+}
+
+/*Testimonial*/
+.testimonial-container {
+  font-size: 30px;
+  color: black;
+  position: relative;
+  height: 400px;
+  width: 100vw;
+  background-image: url("/assets/notepad.avif");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.testimonial-container h1 {
+  text-align: center;
+  padding-top: 40px;
+}
+
+.scroll-text {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  padding: 20px 20px;
+  white-space: nowrap;
+  height: 70%;
+}
+.scroll-text p {
+  display: inline-block;
+  color: black;
+  text-align: center;
+  font-size: 20px;
+  width: 50%;
+  height: 80%;
+  overflow: hidden;
+  text-wrap: wrap;
+  padding: 20px;
+}
+/*Footer*/
+footer {
+  width: 100vw;
+  height: 100px;
+  position: relative;
+  background-color: var(--main-color);
+}
+footer p {
+  position: relative;
+  top: 20px;
+  left: 50%;
+  transform: translate(-50%);
+  display: inline-block;
+}
+/*/Footer*/
+
+/*Main*/
+
+/*ABOUT SECTION*/
+
+.about-container {
+  width: 100vw;
+  height: 80vh;
+  position: relative;
+  align-items: center;
+  text-align: center;
+  background-image: url("assets/team2.jpg");
+  background-repeat: no-repeat;
+  background-size: 110%;
+}
+.about-content {
+  position: relative;
+  align-items: center;
+  text-align: center;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  overflow: scroll;
+  scroll-behavior: auto;
+}
+
+.about-container h1 {
+  position: relative;
+  bottom: 50px;
+}
+
+.project-container {
+  width: 85vw;
+  height: 400px;
+  position: relative;
+  display: grid;
+  left: 50%;
+  transform: translate(-50%);
+  padding: 20px;
+}
+
+.scroll-image {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  height: 100%;
+}
+.scroll-image img {
+  display: inline-block;
+  color: black;
+  text-align: center;
+
+  height: 100%;
+  overflow: hidden;
+  text-wrap: wrap;
+  padding: 20px;
+}
+
+/*SERVICES SECTION*/
+
+#services-container {
+  width: 100vw;
+  height: auto;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+.service-item {
+  width: 80%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+}
+
+.service-title {
+  text-align: center;
+}
+
+/*CONTACT SECTION*/
+
+.contact-container {
+  height: 81vh;
+  position: relative;
+  width: 100vw;
+
+  background-image: url("assets/team.jpg");
+  background-size: cover;
+}
+
+.name-form {
+  position: absolute;
+  top: 12%;
+  left: 50%;
+  transform: translate(-50%);
+  width: 300px;
+  height: 30px;
+}
+.email-form {
+  position: absolute;
+  top: 4%;
+  left: 50%;
+  transform: translate(-50%);
+  width: 300px;
+  height: 30px;
+}
+.message-form {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%);
+  width: 300px;
+  height: 300px;
+}
+.submit {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 700px) {
+  nav a {
+    width: auto;
+    font-size: 18px;
+    height: 20px;
+    top: 50%;
+  }
+  .hero p {
+    font-size: 20px;
+  }
+  .button {
+    font-size: 14px;
+  }
+
+  .services-container h1,
+  .about-container h1 {
+    font-size: 35px;
+  }
+  .services-container ul {
+    font-size: 20px;
+  }
+  .testimonial-container {
+    font-size: 20px;
+  }
+  .about-container p {
+    font-size: 20px;
+  }
+  .about-container {
+    width: 100vw;
+    height: 80vh;
+    background-size: 160%;
+  }
+  .about-container h1 {
+    top: 0%;
+  }
+}
